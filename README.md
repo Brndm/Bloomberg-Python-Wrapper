@@ -6,7 +6,9 @@ V.3.6.2
 
 # Python libraries used
 pandas (V0.20.3 or higher)
+
 xbbg   (V0.6.0 or higher)
+
 plotpy (V4.5.2 or higher)
 
 # Other requirements
