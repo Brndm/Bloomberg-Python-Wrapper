@@ -10,7 +10,7 @@ dates = input("Enter desired dates (yyyy-mm-dd):").split(" ")
 
 # Main
 # If nothing is specified launch the example
-if len(tickers) == 0 or len(fields) == 0 or len(dates) == 0:
+if len(tickers) == 1 or len(fields) == 1 or len(dates) == 1:
     print("Invalid entries. Example will be displayed ")
     bloom_feed = Title('SPX Index', ['open', 'high', 'low', 'last_price'], '2020-01-01', '2020-01-31')
     bloom_feed.display_candle()
