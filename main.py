@@ -4,7 +4,7 @@ import os
 
 # Global variables
 bucket = {}
-storage_folder = 'C:/Users/Brian/Desktop/Bloomberg data/API data/'
+storage_folder = 'C:/Users/Fake_path/'
 
 
 # Main menu
