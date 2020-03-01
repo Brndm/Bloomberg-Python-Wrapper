@@ -4,7 +4,7 @@ import os
 
 # Global variables
 bucket = {}
-storage_folder = 'C:/Users/Fake_path/'
+storage_folder = 'C:/Users/Brian/Desktop/Bloomberg data/API data/'
 
 
 # Main menu
@@ -47,15 +47,17 @@ def end_program():
 # Store dict to excel
 def store_to_excel(data):
     global storage_folder
-
+    frames = []
     with pd.ExcelWriter(storage_folder + 'bloom_output.xlsx') as writer:
         for key in data:
-            data[key].get_data().to_excel(writer, sheet_name=key)
+            frames.append(data[key].get_data())
+        result = pd.concat(frames, axis=1)
+        result.to_excel(writer, sheet_name="Bloom_output")
 
 
 def import_bloom_data():
     # Get inputs
-    tickers = input("Enter titles: ('/' as sep)").split("/")
+    tickers = input("Enter titles: ('-' as sep)").split("-")
     fields = input("Enter fields:").split(" ")
     dates = input("Enter desired dates (yyyy-mm-dd):").split(" ")
 
